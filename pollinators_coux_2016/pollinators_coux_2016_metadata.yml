@@ -56,18 +56,18 @@ traits:
   type: categorical
   levels: 
   - value: social
-    description: nesting behaviour
+    description: social nesting behaviour
   - value: solitary
-    description: nesting behaviour
+    description: solitary nesting behaviour
 - variable: larv_necpol
   name: larval preference for nectar or pollen
   category: diet
   type: binary
   levels: 
   - value: 1 
-  - descrption: larvae eats nectar or pollen
+  - description: larvae eats nectar or pollen
   - value: 0
-  - descrption: larvae eats neither nectar nor pollen
+  - description: larvae eats neither nectar nor pollen
   units: none
 - variable: larv_plant
   name: larval preference for decaying vegetation
@@ -75,9 +75,9 @@ traits:
   type: binary
   levels: 
   - value: 1 
-  - descrption: larvae eats decaying vegetation
+  - description: larvae eats decaying vegetation
   - value: 0
-  - descrption: larvae does not eat decaying vegetation
+  - description: larvae does not eat decaying vegetation
   units: none
 - variable: larv_carr
   name: larval preference for carrion
@@ -85,9 +85,9 @@ traits:
   type: binary
   levels: 
   - value: 1 
-  - descrption: larvae eats carrion
+  - description: larvae eats carrion
   - value: 0
-  - descrption: larvae does not eat carrion
+  - description: larvae does not eat carrion
   units: none
 - variable: larv_paras
   name: larval parasite
@@ -95,9 +95,9 @@ traits:
   type: binary
   levels: 
   - value: 1 
-  - descrption: larvae is a parasite
+  - description: larvae is a parasite
   - value: 0
-  - descrption: larvae is not a parasite
+  - description: larvae is not a parasite
   units: none
 - variable: larv_dung
   name: larval preference for dung
@@ -105,9 +105,9 @@ traits:
   type: binary
   levels: 
   - value: 1 
-  - descrption: larvae eats dung
+  - description: larvae eats dung
   - value: 0
-  - descrption: larvae does not eat dung
+  - description: larvae does not eat dung
   units: none
 - variable: larv_plant
   name: larval predation on other insects
@@ -115,9 +115,9 @@ traits:
   type: binary
   levels: 
   - value: 1 
-  - descrption: larvae predates on other insects
+  - description: larvae predates on other insects
   - value: 0
-  - descrption: larvae does not predate other insects
+  - description: larvae does not predate other insects
   units: none
 - name: Pollen carrying structure
   variable: Carrying_structure
@@ -136,19 +136,19 @@ traits:
   type: categorical
   levels:
   - value: Jan
-    description: month of seasonal abundance peak
+    description: January
   - value: Feb
-    description: month of seasonal abundance peak
+    description: February
   - value: Mar
-    description: month of seasonal abundance peak
+    description: March
   - value: Jun
-    description: month of seasonal abundance peak  
+    description: June
   - value: Aug
-    description: month of seasonal abundance peak  
+    description: August
   - value: Nov
-    description: month of seasonal abundance peak
+    description: November
   - value: Dec
-    description: month of seasonal abundance peak
+    description: December
 - name: time of daily abundance peak
   variable: daily
   category: phenology
