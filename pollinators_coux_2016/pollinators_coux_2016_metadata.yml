@@ -1,0 +1,165 @@
+status: draft
+dataset:
+  id: pollinators_coux_2016
+  title: Pollinator functional traits
+  description: Functional traits of pollinators from the Canterbury region, South Island, New Zealand. For each pollinator species, we compiled information for the following 9 traits: (1) body length (mm); (2) body width, measured as distance between the base of the wings in mm (i.e. intertegula span in bees); (3) flower visiting time: mean duration of flower visitation in s; (4) foraging preference of adults: nectar or pollen (proportions of their diet made of nectar vs. pollen,  in 2 different columns, sum of both equals 100%); (6) behaviour: social or solitary; (7) larval feeding type: nectar or pollen, decaying vegetation, carrion, parasite, dung, predator of other insect (binary: 1 or 0 if not part of diet);  (8) pollen carrying structure: scopa, corbicula, none; (9) month of seasonal abundance peak; (10) time of daily abundance peak. Morphological trait values (e.g. body length and width) were derived by obtaining the mean dimensions of ten representative specimens. Traits related to foraging preferences and flower visitation were measured in mass flowering Brassica rapa fields as part of another study (Rader et al., 2009). Data were collected in Field Based Observation Studies (FBOS) conducted by Rader et al., 2014, or from other Literature: Colles & McAlpine 1991; Howlett et al. 2005; Donovan 2007; Michener 2007; Rader et al. 2009.
+  license: CC0
+  bibtex: .filename
+  doi: https://doi.org/10.6084/m9.figshare.3154078.v1
+  url: https://figshare.com/articles/dataset/Plant_pollinator_pollen_transportation_network_traits_and_pollinator_abundances_/3154078
+  taxon: Hymenoptera, Diptera
+  taxonomic_level: species
+  type: static
+  file_url: https://figshare.com/ndownloader/files/4913287
+  file_name: pollinator_traits
+  file_extension: .csv
+  manual_download: yes
+  sheet: 1
+  long_format: yes
+  skip_rows: .na
+  col_separator: ','
+  na_value: NA
+  taxonomy:
+    genus: .na
+    species: yes
+    binomial: .column
+  comment: .na
+traits:
+- variable: body_length
+  name: body length
+  category: morphological
+  type: quantitative
+  units: mm
+- variable: body_weigth
+  name: body width
+  category: morphological
+  type: quantitative
+  units: mm
+- variable: flw_vis_time
+  name: flower visiting time
+  category: behaviour
+  type: quantitative
+  units: s
+- variable: pref_nec
+  name: preference for nectar
+  category: diet
+  type: quantitative
+  units: proportions
+- variable: pref_pol
+  name: preference for pollen
+  category: diet
+  type: quantitative
+  units: proportions
+- name: Social or solitairy
+  variable: soc_sol
+  category: behaviour
+  type: categorical
+  levels: 
+  - value: social
+    description: nesting behaviour
+  - value: solitary
+    description: nesting behaviour
+- variable: larv_necpol
+  name: larval preference for nectar or pollen
+  category: diet
+  type: binary
+  levels: 
+  - value: 1 
+  - descrption: larvae eats nectar or pollen
+  - value: 0
+  - descrption: larvae eats neither nectar nor pollen
+  units: none
+- variable: larv_plant
+  name: larval preference for decaying vegetation
+  category: diet
+  type: binary
+  levels: 
+  - value: 1 
+  - descrption: larvae eats decaying vegetation
+  - value: 0
+  - descrption: larvae does not eat decaying vegetation
+  units: none
+- variable: larv_carr
+  name: larval preference for carrion
+  category: diet
+  type: binary
+  levels: 
+  - value: 1 
+  - descrption: larvae eats carrion
+  - value: 0
+  - descrption: larvae does not eat carrion
+  units: none
+- variable: larv_paras
+  name: larval parasite
+  category: diet
+  type: binary
+  levels: 
+  - value: 1 
+  - descrption: larvae is a parasite
+  - value: 0
+  - descrption: larvae is not a parasite
+  units: none
+- variable: larv_dung
+  name: larval preference for dung
+  category: diet
+  type: binary
+  levels: 
+  - value: 1 
+  - descrption: larvae eats dung
+  - value: 0
+  - descrption: larvae does not eat dung
+  units: none
+- variable: larv_plant
+  name: larval predation on other insects
+  category: diet
+  type: binary
+  levels: 
+  - value: 1 
+  - descrption: larvae predates on other insects
+  - value: 0
+  - descrption: larvae does not predate other insects
+  units: none
+- name: Pollen carrying structure
+  variable: Carrying_structure
+  category: morphology
+  type: categorical
+  levels: 
+  - value: corbicula
+    description: pollinator has a corbicula
+  - value: Scopa
+    description: pollinator has a scopa
+  - value: None
+    description: pollinator does not have a pollen carrying structure
+- name: month of seasonal abundance peak
+  variable: season
+  category: phenology
+  type: categorical
+  levels:
+  - value: Jan
+    description: month of seasonal abundance peak
+  - value: Feb
+    description: month of seasonal abundance peak
+  - value: Mar
+    description: month of seasonal abundance peak
+  - value: Jun
+    description: month of seasonal abundance peak  
+  - value: Aug
+    description: month of seasonal abundance peak  
+  - value: Nov
+    description: month of seasonal abundance peak
+  - value: Dec
+    description: month of seasonal abundance peak
+- name: time of daily abundance peak
+  variable: daily
+  category: phenology
+  type: categorical
+  levels:
+  - value: X10am
+    description: 10am
+  - value: X12pm
+    description: 12pm
+  - value: X2pm
+    description: 2pm
+  - value: X6pm
+    description: 6pm
+
