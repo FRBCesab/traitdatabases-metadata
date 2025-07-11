@@ -1,0 +1,71 @@
+status: complete
+dataset:
+  id: hodgson_2023
+  title: "A functional trait database of arable weeds from Eurasia and North Africa"
+  description: "The functional traits of arable weeds in Eurasia and North Africa database contains functional trait values for specific leaf area, canopy height, canopy diameter, leaf area per node thickness, vegetative propagation, and plant life history for 928 arable weed species."
+  license: CC BY-SA 4.0
+  bibtex: hodgson_2023.bib
+  doi: 10.5287/ora-pp4y9nkoz
+  url: https://ora.ox.ac.uk/objects/uuid:abafafd9-e8a2-4e84-a339-0a11bf2858ae                  # URL of the dataset description (paper)
+  taxon: plants
+  taxonomic_level: species 
+  type: static
+  file_url: https://ora.ox.ac.uk/objects/uuid:abafafd9-e8a2-4e84-a339-0a11bf2858ae/files/s8p58pf68w
+  file_name: Functional+trait+database+of+arable+weeds+from+Eurasia+and+North+Africa
+  file_extension: .xlsx
+  manual_download: no
+  sheet: 1         
+  long_format: no
+  skip_rows: .na
+  col_separator: .na
+  na_value: NA 
+  taxonomy:
+    genus: .na
+    species: .na
+    binomial: Species
+  comment: .na
+traits:
+- variable: SLA       
+  name: Specific leaf area     
+  category: morphology
+  type: quantitative      
+  units: mm2.mg-1
+- variable: ARNODE     
+  name: Area per node/thickness     
+  category: morphology
+  type: quantitative      
+  units: mm2.mg-1
+- variable: LOGCANH      
+  name: Canopy height
+  category: morphology
+  type: quantitative      
+  units: cm converted to bins of log2 
+- variable: LOGCAND      
+  name: Canopy diameter
+  category: morphology
+  type: quantitative      
+  units: cm converted to bins of log2 
+- variable: VEGPROP      
+  name: Vegetative propagation of perennials
+  category: reproduction
+  type: categorical      
+  units: .na 
+  levels: 
+  - value: 1            
+    description: yes
+  - value: 0 
+    description: no 
+- variable: LIFEHIST
+  name: Life history
+  category: Life history
+  type: categorical           
+  units: .na               
+  levels: 
+  - value: ann 
+    description: annual
+  - value: herb.perenn            
+    description: herbaceous perennial
+  - value: woody.peren      
+    description: wood perennial
+  - value: bienn      
+    description: biennial
