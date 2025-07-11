@@ -1,4 +1,4 @@
-status: draft
+status: complete
 dataset:
   id: pollinators_coux_2016
   title: Pollinator functional traits
@@ -15,14 +15,14 @@ dataset:
   file_extension: .csv
   manual_download: yes
   sheet: 1
-  long_format: yes
+  long_format: no
   skip_rows: .na
   col_separator: ','
   na_value: NA
   taxonomy:
     genus: .na
-    species: yes
-    binomial: .column
+    species: .na
+    binomial: X
   comment: .na
 traits:
 - variable: body_length
