@@ -1,25 +1,26 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+# Trait databases: submission repository
 
-=========================================================
 
 <!-- badges: start -->
-
 [![License CC BY
 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-green.svg)](https://creativecommons.org/licenses/by/4.0/)
 ![Lifecycle
 Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)
 <!-- badges: end -->
 
-<p align="left">
 
+<p align="left">
 • <a href="#overview">Overview</a><br> •
-<a href="#description">Description</a><br> • <a href="#get-started">Get
-started</a><br> • <a href="#contributing">Contributing</a><br> •
-<a href="#citation">Citation</a><br> •
-<a href="#acknowledgments">Acknowledgments</a><br> •
-<a href="#references">References</a>
+  <a href="#description">Description</a><br> • 
+  <a href="#get-started">Get started</a><br> • 
+  <a href="#contributing">Contributing</a><br> •
+  <a href="#citation">Citation</a><br> •
+  <a href="#acknowledgments">Acknowledgments</a><br> •
+  <a href="#references">References</a>
 </p>
+
+
 
 ## Overview
 
@@ -30,38 +31,39 @@ Its content (folder `metadata/`) is used by the R package
 [`traitdatabases`](https://github.com/frbcesab/traitdatabases) to
 download, import, clean, and homogenize trait data.
 
+
+
 ## Description
 
 The metadata file describe all information needed to document and
 process the trait database.
 
-| name | description | example |
-|----|----|----|
-| status | Status of the metadata file.<br>One of ‘draft’, ‘incomplete’ or ‘complete’ | draft |
-| id | Dataset identifier. <br> Can be the given name of the database (if any) or build with `firstauthor_year` | hodgson_2023 |
-| title | Dataset title | “A functional trait database <br>of arable weeds from Eurasia<br> and North Africa” |
-| description | Short description of the dataset | “The functional traits of \[…\] <br>for 928 arable weed species.” |
-| license | Dataset license | CC BY-SA 4.0 |
-| bibtex | Name of the dataset citation file in a bibtex format (if any) | hodgson_2023.bib |
-| doi | DOI of the dataset description (paper) | 10.5287/ora-pp4y9nkoz |
-| url | URL of the dataset description (paper) | https[]()://ora.ox.ac.uk/objects/<br>uuid:abafafd9-e8a2-4e84-a339-<br>0a11bf2858ae |
-| taxon | Taxonomic group (mammals, birds, etc.) | plants |
-| taxonomic_level | Taxonomic resolution (species, genus, etc.) | species |
-| type | One of ‘static’ or ‘api’ | static |
-| file_url | Full URL to download the static file | https[]()://ora.ox.ac.uk/objects/<br>uuid:abafafd9-e8a2-4e84-a339-<br>0a11bf2858ae/files/s8p58pf68w |
-| file_name | Name of the static file | Functional+trait+database+<br>of+arable+weeds+from+<br>Eurasia+and+North+Africa |
-| file_extension | File extension of the static file | .xlsx |
-| manual_download | Need manuel download? <br> One of ‘yes’ (if Wiley) or ‘no’ (most cases) | no |
-| sheet | Sheet number for xslx dataset <br> NA if not in xlsx format | 1 |
-| long_format | Format of the trait database. One of ‘yes’ (long) or ‘no’ (wide, most commun) | no |
-| skip_rows | Number of header rows to remove, if any | 0 |
-| col_separator | Character used to separate columns (for text file or csv) | .na |
-| na_value | Character used for missing values | NA |
-| comment | add any relevant comment, if any |  |
-|  | **Taxononomy** |  |
-| genus | Column name of the genus <br>(when species name separated from genus) | NA |
-| species | Column name of the species <br>(when species name separated from genus) | NA |
-| binomial | Column name of the binomial name | Species |
+| Tag name          | Description | Example |
+| :---------------: | :--- |----|
+| `status`          | Status of the metadata file.<br>One of ‘draft’, ‘incomplete’ or ‘complete’ | draft |
+| `id`              | Dataset identifier. <br> Can be the given name of the database (if any) or build with `firstauthor_year` | hodgson_2023 |
+| `title`           | Dataset title | “A functional trait database <br>of arable weeds from Eurasia<br> and North Africa” |
+| `description`     | Short description of the dataset | “The functional traits of \[…\] <br>for 928 arable weed species.” |
+| `license`         | Dataset license | CC BY-SA 4.0 |
+| `bibtex`          | Name of the dataset citation file in a bibtex format (if any) | hodgson_2023.bib |
+| `doi`             | DOI of the dataset description (paper) | 10.5287/ora-pp4y9nkoz |
+| `url`             | URL of the dataset description (paper) | https[]()://ora.ox.ac.uk/objects/<br>uuid:abafafd9-e8a2-4e84-a339-<br>0a11bf2858ae |
+| `taxon`           | Taxonomic group (mammals, birds, etc.) | plants |
+| `taxonomic_level` | Taxonomic resolution (species, genus, etc.) | species |
+| `type`            | One of ‘static’ or ‘api’ | static |
+| `file_url`        | Full URL to download the static file | https[]()://ora.ox.ac.uk/objects/<br>uuid:abafafd9-e8a2-4e84-a339-<br>0a11bf2858ae/files/s8p58pf68w |
+| `file_name`       | Name of the static file | Functional+trait+database+<br>of+arable+weeds+from+<br>Eurasia+and+North+Africa |
+| `file_extension`  | File extension of the static file | .xlsx |
+| `manual_download` | Need manuel download? <br> One of ‘yes’ (if Wiley) or ‘no’ (most cases) | no |
+| `sheet`           | Sheet number for xslx dataset <br> NA if not in xlsx format | 1 |
+| `long_format`     | Format of the trait database. One of ‘yes’ (long) or ‘no’ (wide, most commun) | no |
+| `skip_rows`       | Number of header rows to remove, if any | 0 |
+| `col_separator`   | Character used to separate columns (for text file or csv) | .na |
+| `na_value`        | Character used for missing values | NA |
+| `comment`         | add any relevant comment, if any |  |
+| `genus`           | Column name of the genus <br>(when species name separated from genus) | NA |
+| `species`         | Column name of the species <br>(when species name separated from genus) | NA |
+| `binomial`        | Column name of the binomial name | Species |
 
 Additionally, there are five fields that are important to describe for
 each trait:
