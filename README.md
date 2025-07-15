@@ -51,17 +51,17 @@ The metadata file describes all information needed to document and process the t
 
 | Tag name          | Description                                                                                                 | Example        |
 | :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
-| `id`              | The dataset identifier[^1].<br>Can be the given name of the database (if any) or build with `firstauthor_year` | `hodgson_2023` |
-| `title`           | The dataset title | “A functional trait database <br>of arable weeds from Eurasia<br> and North Africa” |
-| `description`     | Short description of the dataset | “The functional traits of \[…\] <br>for 928 arable weed species.” |
-| `license`         | Dataset license | CC BY-SA 4.0 |
-| `bibtex`          | Name of the dataset citation file in a bibtex format (if any) | hodgson_2023.bib |
-| `doi`             | DOI of the dataset description (paper) | 10.5287/ora-pp4y9nkoz |
-| `url`             | URL of the dataset description (paper) | https[]()://ora.ox.ac.uk/objects/<br>uuid:abafafd9-e8a2-4e84-a339-<br>0a11bf2858ae |
-| `taxon`           | Taxonomic group (mammals, birds, etc.) | plants |
-| `taxonomic_level` | Taxonomic resolution (species, genus, etc.) | species |
-| `type`            | One of ‘static’ or ‘api’ | static |
-| `file_url`        | Full URL to download the static file | https[]()://ora.ox.ac.uk/objects/<br>uuid:abafafd9-e8a2-4e84-a339-<br>0a11bf2858ae/files/s8p58pf68w |
+| `id`              | The dataset identifier[^1]. It's up to you to choose this identifier. Can be the name of the database, the first author and year, etc. | `hodgson_2023` |
+| `title`           | The dataset title. Typically the title of the (data) paper. | "A functional trait database of arable weeds from Eurasia and North Africa" |
+| `description`     | A short description of the dataset | "The functional traits of \[…\] for 928 arable weed species." |
+| `license`         | The dataset license. | `CC BY-SA 4.0` |
+| `bibtex`          | The name of the dataset citation file in a BibTex format (optional) | `hodgson_2023.bib` |
+| `doi`             | The Digital Object Identifier (DOI) of the dataset description | `10.5287/ora-pp4y9nkoz` |
+| `url`             | The URL of the dataset description (paper) | <https://ora.ox.ac.uk/objects/uuid:abafafd9-e8a2-4e84-a339-0a11bf2858ae> |
+| `taxon`           | The taxonomic group (mammals, birds, etc.) | `plants` |
+| `taxonomic_level` | The taxonomic resolution (individuals, species, genus, etc.) | `species` |
+| `type`            | One of:<br>-  `static` (a file that can be downloaded)<br>- `api` () | `static` |
+| `file_url`        | Full URL to download the static file | <https://ora.ox.ac.uk/objects/uuid:abafafd9-e8a2-4e84-a339-0a11bf2858ae/files/s8p58pf68w> |
 | `file_name`       | Name of the static file | Functional+trait+database+<br>of+arable+weeds+from+<br>Eurasia+and+North+Africa |
 | `file_extension`  | File extension of the static file | .xlsx |
 | `manual_download` | Need manuel download? <br> One of ‘yes’ (if Wiley) or ‘no’ (most cases) | no |
