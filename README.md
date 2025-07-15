@@ -1,12 +1,10 @@
 
-# Trait databases: submission repository
+# Trait databases: Metadata submission repo
 
 
 <!-- badges: start -->
-[![License CC BY
-4.0](https://img.shields.io/badge/License-CC%20BY%204.0-green.svg)](https://creativecommons.org/licenses/by/4.0/)
-![Lifecycle
-Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)
+[![License CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-green.svg)](https://creativecommons.org/licenses/by/4.0/)
+![Lifecycle Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)
 <!-- badges: end -->
 
 
@@ -24,25 +22,37 @@ Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)
 
 ## Overview
 
-This repository is a bank centralizing metadata files describing various
-published trait databases.
+This repository is a bank centralizing metadata files describing various published trait databases.
 
-Its content (folder `metadata/`) is used by the R package
-[`traitdatabases`](https://github.com/frbcesab/traitdatabases) to
-download, import, clean, and homogenize trait data.
+Its content (folder `metadata/`) is used by the R package [`traitdatabases`](https://github.com/frbcesab/traitdatabases) to download, import, clean, and homogenize trait data.
 
 
 
 ## Description
 
-The metadata file describe all information needed to document and
-process the trait database.
+The metadata file describes all information needed to document and process the trait database. It is structured in four sections:
 
-| Tag name          | Description | Example |
-| :---------------: | :--- |----|
-| `status`          | Status of the metadata file.<br>One of ‘draft’, ‘incomplete’ or ‘complete’ | draft |
-| `id`              | Dataset identifier. <br> Can be the given name of the database (if any) or build with `firstauthor_year` | hodgson_2023 |
-| `title`           | Dataset title | “A functional trait database <br>of arable weeds from Eurasia<br> and North Africa” |
+- `status`: the status of the metadata file
+- `dataset`: general metadata of the dataset
+- `taxonomy`: information about taxonomic columns
+- `traits`: description of the trait data
+
+
+
+### Section 'status'
+
+| Tag name          | Description                                                                                                 | Example        |
+| :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
+| `status`          | The status of the metadata file. Should be one of:<br>- `draft`<br>- `incomplete` (some metadata need to be added)<br>-  `complete` (all metadata has been filled in) | `draft` |
+
+
+
+### Section 'dataset'
+
+| Tag name          | Description                                                                                                 | Example        |
+| :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
+| `id`              | The dataset identifier[^1].<br>Can be the given name of the database (if any) or build with `firstauthor_year` | `hodgson_2023` |
+| `title`           | The dataset title | “A functional trait database <br>of arable weeds from Eurasia<br> and North Africa” |
 | `description`     | Short description of the dataset | “The functional traits of \[…\] <br>for 928 arable weed species.” |
 | `license`         | Dataset license | CC BY-SA 4.0 |
 | `bibtex`          | Name of the dataset citation file in a bibtex format (if any) | hodgson_2023.bib |
@@ -61,20 +71,29 @@ process the trait database.
 | `col_separator`   | Character used to separate columns (for text file or csv) | .na |
 | `na_value`        | Character used for missing values | NA |
 | `comment`         | add any relevant comment, if any |  |
+
+
+### Section 'taxonomy'
+
+| Tag name          | Description                                                                                                 | Example        |
+| :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
 | `genus`           | Column name of the genus <br>(when species name separated from genus) | NA |
 | `species`         | Column name of the species <br>(when species name separated from genus) | NA |
 | `binomial`        | Column name of the binomial name | Species |
 
-Additionally, there are five fields that are important to describe for
-each trait:
+[^1]: The dataset identifier should be short and should only contain letters, numbers and the symbol `_`.
 
-| name     | description                                    | example            |
-|----------|------------------------------------------------|--------------------|
-| variable | Column name of the trait (as in the data file) | SLA                |
-| name     | Full name of the trait                         | Specific leaf area |
-| category | Category of the trait                          | Leaf morphology    |
-| type     | One of ‘quantitative’ or ‘categoric’           | quantitative       |
-| units    | Original unit                                  | mm2.mg-1           |
+
+
+### Section 'traits'
+
+| Tag name          | Description                                                                                                 | Example        |
+| :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
+| `variable` | Column name of the trait (as in the data file) | SLA                |
+| `name`     | Full name of the trait                         | Specific leaf area |
+| `category` | Category of the trait                          | Leaf morphology    |
+| `type`     | One of ‘quantitative’ or ‘categoric’           | quantitative       |
+| `units`    | Original unit                                  | mm2.mg-1           |
 
 In the case of categorical traits, all categories should be listed with
 two informations (‘value’ and ‘description’). These information describe
@@ -92,6 +111,8 @@ each level of the categorical traits. For instance, in yaml format:
         description: no 
 
 In excel, make sure to add a new lines for every label.
+
+
 
 ## Get started
 
