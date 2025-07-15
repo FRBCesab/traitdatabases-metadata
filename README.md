@@ -64,13 +64,13 @@ The metadata file describes all information needed to document and process the t
 | `file_url`        | The full URL to download the static file.<br>**NB.** Equal to `.na` if `type: api` | <https://ora.ox.ac.uk/objects/uuid:abafafd9-e8a2-4e84-a339-0a11bf2858ae/files/s8p58pf68w> |
 | `file_name`       | The name of the static file (with file extension).<br>**NB.** Equal to `.na` if `type: api` | `Functional+trait+database+of+arable+`<br>`weeds+from+Eurasia+and+`<br>`North+Africa.xlsx` |
 | `file_extension`  | The file extension of the static file.<br>**NB.** Equal to `.na` if `type: api` | `.xlsx` |
-| `manual_download` | Need manuel download? <br> One of ‘yes’ (if Wiley) or ‘no’ (most cases) | no |
-| `sheet`           | Sheet number for xslx dataset <br> NA if not in xlsx format | 1 |
-| `long_format`     | Format of the trait database. One of ‘yes’ (long) or ‘no’ (wide, most commun) | no |
-| `skip_rows`       | Number of header rows to remove, if any | 0 |
-| `col_separator`   | Character used to separate columns (for text file or csv) | .na |
-| `na_value`        | Character used for missing values | NA |
-| `comment`         | add any relevant comment, if any |  |
+| `manual_download` | Does the data file need to be manually downloaded? One of:<br>- `yes`: only for specific cases like data hosted by Wiley Online Library<br>- `no`: data file can be downloaded through command line (most cases)<br>- `.na`: if `type: api` | `no` |
+| `sheet`           | The sheet number that contains data (only for `xslx` file)<br>**NB.** Equal to `.na` for non Excel file or if `type: api` | `1` |
+| `long_format`     | Are the trait data in long format?. One of:<br>- `yes`: data are in long format<br>- `no`: data are in wide format (most cases)<br>- `.na`: if `type: api` | no |
+| `skip_rows`       | The number of header rows to remove (if any) | `.na` |
+| `col_separator`   | The character used to separate columns (for `txt` or `csv` files) | `.na` |
+| `na_value`        | The characters used for missing values (if any) | `NA` |
+| `comment`         | Any relevant comment (if any) | `.na` |
 
 
 ### Section 'taxonomy'
