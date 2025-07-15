@@ -66,7 +66,7 @@ The metadata file describes all information needed to document and process the t
 | `file_extension`  | The file extension of the static file.<br>**NB.** Equal to `.na` if `type: api` | `.xlsx` |
 | `manual_download` | Does the data file need to be manually downloaded? One of:<br>- `yes`: only for specific cases like data hosted by Wiley Online Library<br>- `no`: data file can be downloaded through command line (most cases)<br>- `.na`: if `type: api` | `no` |
 | `sheet`           | The sheet number that contains data (only for `xslx` file)<br>**NB.** Equal to `.na` for non Excel file or if `type: api` | `1` |
-| `long_format`     | Are the trait data in long format?. One of:<br>- `yes`: data are in long format<br>- `no`: data are in wide format (most cases)<br>- `.na`: if `type: api` | no |
+| `long_format`     | Are the trait data in long format?. One of:<br>- `yes`: data are in long format<br>- `no`: data are in wide format (most cases)<br>- `.na`: if `type: api` | `no` |
 | `skip_rows`       | The number of header rows to remove (if any) | `.na` |
 | `col_separator`   | The character used to separate columns (for `txt` or `csv` files) | `.na` |
 | `na_value`        | The characters used for missing values (if any) | `NA` |
@@ -75,11 +75,11 @@ The metadata file describes all information needed to document and process the t
 
 ### Section 'taxonomy'
 
-| Tag name          | Description                                                                                                 | Example        |
-| :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
-| `genus`           | Column name of the genus <br>(when species name separated from genus) | NA |
-| `species`         | Column name of the species <br>(when species name separated from genus) | NA |
-| `binomial`        | Column name of the binomial name | Species |
+| Tag name          | Description                                                                 | Example   |
+| :---------------: | :-------------------------------------------------------------------------- | :-------- |
+| `genus`           | The column name of the genus (when species and genus names are separated)   | `.na`     |
+| `species`         | The column name of the species (when species and genus names are separated) | `.na`     |
+| `binomial`        | The column name of the binomial name                                        | `Species` |
 
 [^1]: The dataset identifier should be short and should only contain letters, numbers and the symbol `_`.
 
