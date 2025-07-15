@@ -39,7 +39,7 @@ The metadata file describes all information needed to document and process the t
 
 
 
-### Section 'status'
+### Section `status`
 
 | Tag name          | Description                                                                                                 | Example        |
 | :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
@@ -47,7 +47,7 @@ The metadata file describes all information needed to document and process the t
 
 
 
-### Section 'dataset'
+### Section `dataset`
 
 | Tag name          | Description                                                                                                 | Example        |
 | :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
@@ -72,8 +72,11 @@ The metadata file describes all information needed to document and process the t
 | `na_value`        | The characters used for missing values (if any) | `NA` |
 | `comment`         | Any relevant comment (if any) | `.na` |
 
+[^1]: The dataset identifier should be short and should only contain letters, numbers and the symbol `_`.
 
-### Section 'taxonomy'
+
+
+### Section `taxonomy`
 
 | Tag name          | Description                                                                 | Example   |
 | :---------------: | :-------------------------------------------------------------------------- | :-------- |
@@ -81,52 +84,51 @@ The metadata file describes all information needed to document and process the t
 | `species`         | The column name of the species (when species and genus names are separated) | `.na`     |
 | `binomial`        | The column name of the binomial name                                        | `Species` |
 
-[^1]: The dataset identifier should be short and should only contain letters, numbers and the symbol `_`.
 
 
 
-### Section 'traits'
+### Section `traits`
 
-| Tag name          | Description                                                                                                 | Example        |
-| :---------------: | :---------------------------------------------------------------------------------------------------------- | :------------- |
-| `variable` | Column name of the trait (as in the data file) | SLA                |
-| `name`     | Full name of the trait                         | Specific leaf area |
-| `category` | Category of the trait                          | Leaf morphology    |
-| `type`     | One of ‘quantitative’ or ‘categoric’           | quantitative       |
-| `units`    | Original unit                                  | mm2.mg-1           |
+| Tag name   | Description                                                         | Example              |
+| :--------: | :------------------------------------------------------------------ | :------------------- |
+| `variable` | The column name of the trait (as in the data file)                  | `SLA`                |
+| `name`     | The full name of the trait                                          | `Specific leaf area` |
+| `category` | The category of the trait[^2]                                       | `Leaf morphology`    |
+| `type`     | The type of the trait. One of:<br>- `quantitative`<br>- `categoric` | `quantitative`       |
+| `units`    | The "original" unit of the trait (for quantitative trait only)      | `mm2.mg-1`           |
 
-In the case of categorical traits, all categories should be listed with
-two informations (‘value’ and ‘description’). These information describe
-each level of the categorical traits. For instance, in yaml format:
+In the case of `categorical` traits, all categories should be listed with
+two fileds: `value` and `description`. This information describes
+each level of the categorical trait. For instance:
 
-    - variable: VEGPROP      
-      name: Vegetative propagation of perennials
-      category: reproduction
-      type: categorical      
-      units: .na 
-      levels: 
-      - value: 1            
-        description: yes
-      - value: 0 
-        description: no 
-
-In excel, make sure to add a new lines for every label.
+```yaml
+- variable: VEGPROP      
+  name: Vegetative propagation of perennials
+  category: reproduction
+  type: categorical      
+  units: .na 
+  levels: 
+  - value: 1            
+    description: yes
+  - value: 0 
+    description: no 
+```
 
 
 
 ## Get started
 
-Follow this 6-steps procedure to add a new metadata in the
-`traitdatabases` package.  
+> Follow this 6-step procedure to submit a metadata file for a new trait dataset.  
+
 Before proceeding, make sure that the dataset you want to add is not
-already in `traitdatabases-metadata`. Have a look at the example from
-the [metadata of Hodgson et
-al. 2023](https://github.com/FRBCesab/traitdatabases-metadata/blob/main/metadata/hodgson_2023/hodgson_2023_metadata.yml)
-to understand which information is expected in each field.
+already in `traitdatabases-metadata`.
+
+Also, have a look at the example from the [Hodgson et al. 2023](https://github.com/FRBCesab/traitdatabases-metadata/blob/main/metadata/hodgson_2023/hodgson_2023_metadata.yml) to understand which information is expected in each field.
+
 
 #### 1. Fork this repository
 
-Click on the fork icon on the top right of this folder.
+Click on the Fork icon on the top right of this repository.
 
 <figure>
 <img src="doc/figures/fork-1.png" style="width:50.0%"
@@ -134,9 +136,10 @@ alt="click on ‘Create fork’" />
 <figcaption aria-hidden="true">click on ‘Create fork’</figcaption>
 </figure>
 
+
 #### 2. Install the traitdatabases package
 
-``` r
+```r
 ## Install < remotes > package (if not already installed) ----
 if (!requireNamespace(c("remotes", "here"), quietly = TRUE)) {
   install.packages(c("remotes", "here"))
@@ -146,19 +149,18 @@ if (!requireNamespace(c("remotes", "here"), quietly = TRUE)) {
 remotes::install_github("frbcesab/traitdatabases")
 ```
 
-#### 3. Create a new empty metadata file
+#### 3. Create a new metadata file
 
-Choose the name of your dataset and in which format you prefer to fill
-in the metadata (yaml or excel). Then use the function
-`td_create_metadata_file` as follow:
+Choose the name of your dataset. Then, use the function
+[`td_create_metadata_file`](https://frbcesab.github.io/traitdatabases/reference/td_create_metadata_file.html) as follow:
 
-``` r
+```r
 traitdatabases::td_create_metadata_file(
   name = "hodgson_2023", # name of your dataset
-  path = here::here("metadata"), # where to store the metadata
-  format = "yaml" # either 'yaml' or 'xlsx' format
+  path = here::here("metadata")
 )
 ```
+
 
 #### 4. Complete the metadata
 
@@ -168,11 +170,14 @@ metadata.
 It is recommended to add a bibtex file with the citation information of
 the trait database in the same folder as the metadata file.
 
+
+
 #### 5. Check and commit changes
 
 Double check that everything is complete, without errors. Finally,
 update the status of the metadata file (‘complete’, or ‘incomplete’),
 stage the new files and commit the changes.
+
 
 #### 6. Make a pull request
 
