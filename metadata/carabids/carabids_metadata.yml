@@ -1,0 +1,63 @@
+status: to check
+dataset:
+  id: carabids
+  title: carabid traits final
+  description: "Carabid morphological traits. Column names: name_correct = species name; source_measurement = researcher who performed measurement; body_length = body length in mm; antenna_length = antenna length in mm; metafemur_length = length metafemur in mm; eyewith_corr = eye width in mm; note = note; resid_femur = residual femur length in mm (i.e. residual from linear model in which femur length is explained by body length); resid_eye = residual eye length in mm (i.e. residual from linear model in which eye length is explained by body length) resid_antenna = residual antenna length in mm (i.e. residual from linear model in which antenna length is explained by body length)"
+  license: Public domain
+  bibtex: carabid_data_form.bib
+  doi: 10.1111/2041-210x.12728
+  url: https://doi.org/10.1111/2041-210x.12728
+  taxon: carabidae
+  taxonomic_level: species
+  type: static
+  file_url: https://datadryad.org/downloads/file_stream/23901
+  file_name: carabid+traits+final
+  file_extension: .txt
+  manual_download: yes
+  sheet: .number
+  long_format: no
+  skip_rows: .na
+  col_separator: '\t'
+  na_value: .na
+  taxonomy:
+    genus: .na
+    species: name_correct
+    binomial: .column
+  comment: note
+traits:
+- variable: body_length
+  name: body length
+  category: morphological
+  type: quantitative
+  units: mm
+- variable: antenna_length
+  name: antenna length
+  category: morphological
+  type: quantitative
+  units: mm
+- variable: metafemur_length
+  name: metafemur length
+  category: morphological
+  type: quantitative
+  units: mm
+- variable: eyewith_corr
+  name: eye width
+  category: morphological
+  type: quantitative
+  units: mm
+- variable: resid_femur
+  name: residual femur length  (i.e. residual from linear model in which femur length is explained by body length)
+  category: morphological
+  type: quantitative
+  units: mm
+- variable:  resid_eye
+  name: residual eye length  (i.e. residual from linear model in which eye length is explained by body length)
+  category: morphological
+  type: quantitative
+  units: mm
+- variable:  resid_antenna
+  name: residual antenna length  (i.e. residual from linear model in which antenna length is explained by body length)
+  category: morphological
+  type: quantitative
+  units: mm
+
