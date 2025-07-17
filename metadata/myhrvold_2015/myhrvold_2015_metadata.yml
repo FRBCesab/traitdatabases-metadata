@@ -1,0 +1,47 @@
+status: draft
+dataset:
+  id: myhrvold_2015
+  title: "An amniote life-history database to perform comparative analyses with birds, mammals, and reptiles"
+  description: .description
+  license: .license
+  bibtex: .filename
+  doi: 10.1890/15-0846R.1
+  url: https://www.esapubs.org/archive/ecol/E096/269/
+  taxon: birds, mammals, reptiles
+  taxonomic_level: species
+  type: static
+  file_url: https://www.esapubs.org/archive/ecol/E096/269/
+  file_name: Amniote_Database_Aug_2015.csv
+  file_extension: .csv
+  manual_download: no
+  sheet: .number
+  long_format: no
+  skip_rows: .na
+  col_separator: ','
+  na_value: -999
+  taxonomy:
+    genus: genus
+    species: species
+    binomial: .na
+  comment: .na
+traits:
+- variable: female_maturity_d
+  name: "Female age at maturity"
+  category: .na
+  type: quantitative
+  units: day
+- variable: litter_or_clutch_size_n
+  name: "Litter or clutch size"
+  category: .na
+  type: quantitative
+  units: .na
+- variable: litters_or_clutches_per_y
+  name: "Litter or clutch count per year"
+  category: .na
+  type: quantitative
+  units: year-1
+- variable: adult_body_mass_g
+  name: "Body mass of the adult"
+  category: .na
+  type: quantitative
+  units: g
