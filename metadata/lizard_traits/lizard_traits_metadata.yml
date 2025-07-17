@@ -1,0 +1,42 @@
+status: draft
+dataset:
+  id: lizard_traits
+  title: Traits of lizards of the world
+  description: Geographical, morphological, ecological, physiological and life history data for the 6657 known species of lizards. Indication whether there are phylogenetic data associated with them, and their threat assessment, if they have one. Main types of variable contained – body size, ecological, thermal biology, geographic, phylogenetic and life history data Spatial location - global Time period – data are for species known from living, or recently extinct species. Most underlying data were collected during the 20th and 21st centuries. Major taxa – Reptilia, Sauria (Squamata, including Amphisbaenia but excluding Serpentes) Level of measurement. 
+  license: CC0 1.0
+  bibtex: ref_lizard.bib
+  doi: 10.1111/geb.12773
+  url: http://doi.org/10.1111/geb.12773
+  taxon: Reptilia
+  taxonomic_level: species
+  type: static
+  file_url: https://datadryad.org/dataset/doi:10.5061/dryad.f6t39kj
+  file_name: Appendix+S1+-+Lizard+data+version+1.0.csv
+  file_extension: .csv
+  manual_download: no
+  sheet: .number
+  long_format: no
+  skip_rows: no
+  col_separator: ','
+  na_value: 'NA'
+  taxonomy:
+    genus: 'Genus'
+    species: .na
+    binomial: 'Binomial'
+  comment: 'They provide a metadatfile on the Dryad repo (https://datadryad.org/downloads/file_stream/77990)'
+traits:
+- variable: 'maximum SVL'
+  name: 'the maximum known snout-vent length (SVL) of individuals of the species'
+  category: .na
+  type: 'quantitative'
+  units: 'mm'
+- variable: 'female SVL'
+  name: 'mean female SVL (midpoints between the minimum and maximum values where means are not reported)'
+  category: .na
+  type: 'quantitative'
+  units: 'mm'
+- variable: 'hatchling/neonate SVL'
+  name: 'midpoint of hatchling or neonate SVL'
+  category: .na
+  type: 'quantitative'
+  units: 'mm'
