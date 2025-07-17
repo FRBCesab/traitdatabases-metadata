@@ -1,4 +1,4 @@
-status: to check
+status: OK
 dataset:
   id: carabids
   title: carabid traits final
@@ -21,9 +21,9 @@ dataset:
   na_value: .na
   taxonomy:
     genus: .na
-    species: name_correct
-    binomial: .column
-  comment: note
+    species: .na
+    binomial: name_correct
+  comment: "Other (temporal) dataset available with the paper. And in the dataset they are two column: note for the comment and source_measurement = researcher who performed measurement"
 traits:
 - variable: body_length
   name: body length
