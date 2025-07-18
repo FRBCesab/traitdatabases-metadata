@@ -1,0 +1,66 @@
+status: complete
+dataset:
+  id: globtherm
+  title: "GlobTherm, a global database on thermal tolerances for aquatic and terrestrial organisms"
+  description: "The database contains experimentally derived species’ thermal tolerance data currently comprising over 2,000 species of terrestrial, freshwater, intertidal and marine multicellular algae, plants, fungi, and animals."
+  license: Public domain CC0 1.0
+  bibtex: bennett_2018.bib
+  doi: 10.1038/sdata.2018.22
+  url: https://datadryad.org/dataset/doi:10.5061/dryad.1cv08#citations
+  taxon: algae, plants, fungi, and animals
+  taxonomic_level: species
+  type: static
+  file_url: https://datadryad.org/downloads/file_stream/19457
+  file_name: GlobalTherm_upload_02_11_17
+  file_extension: .csv
+  manual_download: no
+  sheet: .na
+  long_format: no
+  skip_rows: .na
+  col_separator: ','
+  na_value: .na
+  taxonomy:
+    genus: Genus
+    species: Species
+    binomial: .na
+  comment: "There are other variables related to the method and quality of the estimate of thermal limits."
+traits:
+- variable: Tmax
+  name: "The upper thermal limit in degrees °C."
+  category: thermal limit
+  type: quantitative
+  units: degrees celsius
+- variable: max_metric
+  name: The metric associated with the upper thermal limit i.e. CTmax, CT50, LT50, LT100.
+  category: thermal limit methodology
+  type: categorical
+  units: .na
+  levels:
+  - value: ctmax
+    description: critical thermal maximum
+  - value: CT50
+    description: critical thermal maximum reduced by 50%
+  - value: LT50
+    description: lethal temperature resulting in the depth of 50% of exposed individuals
+  - value: LT100
+    description: lethal temperature resulting in the depth of 100% of exposed individuals
+- variable: tmin
+  name: "The lower thermal limit in degrees °C."
+  category: thermal limit
+  type: quantitative
+  units: degrees celsius
+- variable: min_metric
+  name: The metric associated with the lower thermal limit i.e. CTmin, LT50, LT100.
+  category: thermal limit methodology
+  type: categorical
+  units: .na
+  levels:
+  - value: ctmin
+    description: critical thermal minimum
+  - value: LT50
+    description: lethal temperature resulting in the depth of 50% of exposed individuals
+  - value: LT100
+    description: lethal temperature resulting in the depth of 100% of exposed individuals
+  - value: SCP
+    description: super cooling point
+
