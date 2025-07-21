@@ -1,10 +1,10 @@
-status: draft
+status: incomplete
 dataset:
   id: myhrvold_2015
   title: "An amniote life-history database to perform comparative analyses with birds, mammals, and reptiles"
-  description: .description
-  license: .license
-  bibtex: .filename
+  description: "A normalized and consolidated database of up to 29 life-history parameters, containing at least one life-history parameter for 21 322 species of birds, mammals, and reptiles"
+  license: CC BY 4.0
+  bibtex: myhrvold_2015.bib
   doi: 10.1890/15-0846R.1
   url: https://www.esapubs.org/archive/ecol/E096/269/
   taxon: birds, mammals, reptiles
@@ -14,7 +14,7 @@ dataset:
   file_name: Amniote_Database_Aug_2015.csv
   file_extension: .csv
   manual_download: no
-  sheet: .number
+  sheet: .na
   long_format: no
   skip_rows: .na
   col_separator: ','
