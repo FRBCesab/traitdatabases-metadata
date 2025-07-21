@@ -1,10 +1,10 @@
-status: draft
+status: complete
 dataset:
   id: lislevand_2007_avianbodysize
-  title: "avianbodysize"
+  title: "Avian body size"
   description: "AVIAN BODY SIZES IN RELATION TO FECUNDITY, MATING SYSTEM, DISPLAY BEHAVIOR, AND RESOURCE SHARING"
-  license: .license
-  bibtex: .filename
+  license: Public domain CC0 1.0
+  bibtex: lislevand_2007.bib
   doi: 10.1890/06-2054
   url: https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/06-2054
   taxon: bird
@@ -13,123 +13,143 @@ dataset:
   file_url: https://figshare.com/collections/AVIAN_BODY_SIZES_IN_RELATION_TO_FECUNDITY_MATING_SYSTEM_DISPLAY_BEHAVIOR_AND_RESOURCE_SHARING/3299798
   file_name: avian_ssd_jan07
   file_extension: .txt
-  manual_download: yes
-  sheet: 1
+  manual_download: no
+  sheet: .na
   long_format: no 
   skip_rows: .na
-  col_separator: ' '
-  na_value: .na
+  col_separator: '\t'
+  na_value: -999
   taxonomy:
     genus: .na
     species: .na
-    binomial: Species
-  comment: .na
+    binomial: Species_name
+  comment: metadata available at https://figshare.com/ndownloader/files/5599232
 traits:
 - variable: M_mass
   name: Body mass of males
-  category: .na
+  category: size
   type: quantitative
   units: grams
 - variable: F_mass
   name: Body mass of females
-  category: .na
+  category: size
   type: quantitative
   units: grams
 - variable: Unsexed_mass
   name: Body mass of unsexed
-  category: .na
+  category: size
   type: quantitative
   units: grams
 - variable: M_wing
   name: Wing length of males
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: F_wing
   name: Wing length of females
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: Unsexed_wing
   name: Wing length of unsexed
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: M_tarsus
   name: Tarsus length of males
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: F_tarsus
   name: Tarsus length of females
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: Unsexed_tarsus
   name: Tarsus length of unsexed
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: M_bill
   name: Bill length of males
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: F_bill
   name: Bill length of females
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: Unsexed_bill
   name: Bill length of unsexed
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: M_tail
   name: Tail length of males
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: F_tail
   name: Tail length of males
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: Unsexed_tail
   name: Tail length of males
-  category: .na
+  category: size
   type: quantitative
   units: mm
 - variable: Clutch_size
-  name: Average number of eggs produced per clutch, or the midpoints of ranges if averages were not availabl
-  category: .na
-  type: .na
+  name: Average number of eggs produced per clutch, or the midpoints of ranges if averages were not available
+  category: reproduction
+  type: quantitative
   units: .na
 - variable: Egg_mass
   name: The average weight of a freshly laid egg
-  category: .na
-  type: .na
+  category: reproduction
+  type: quantitative
   units: grams  
 - variable: Mating_System
-  name: Scores of mating system. See section Class II B for definitions.
-  category: .na
+  name: Scores of mating system
+  category: reproduction
   type: categorical      
   units: .na 
   levels: 
-  - value: 1            
+  - value: 1    
+    description: polyandry        
   - value: 2 
+    description: monogamy (<5% polygyny) 
   - value: 3 
+    description: mostly monogamy, but occasional polygyny (5–15% polygyny)
   - value: 4
+    description: mostly polygyny (> 15% polygyny)
   - value: 5 
+    description: lek or promiscuous
 - variable: Display
-  name: Scores of mating display agility. See section Class II B for definitions.
-  category: .na
+  name: Scores of mating display agility
+  category: reproduction
   type: categorical      
   units: .na 
   levels: 
-  - value: 1            
+  - value: 1     
+    description: ground displays only, including displays on trees and bushes
   - value: 2 
+    description: ground displays, but with occasional jumps/leaps into the air
   - value: 3 
+    description: both ground and non-acrobatic flight displays
   - value: 4
+    description: mainly aerial displays, non-acrobatic
   - value: 5 
+    description: mainly aerial displays, acrobatic
+- variable: Resource
+  name: Scores of territoriality and between-mate resource sharing
+  category: behaviour
+  type: categorical      
+  units: .na 
+  levels: 
+  - value: 1    
+    description: males and females share resources on their territory only during the breeding season        
+  - value: 2
+    description: males and females share resources on their territory all year round 
 
