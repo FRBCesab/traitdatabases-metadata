@@ -1,4 +1,4 @@
-status: draft
+status: complete
 dataset:
   id: lizard_traits
   title: Traits of lizards of the world
@@ -13,17 +13,17 @@ dataset:
   file_url: https://datadryad.org/dataset/doi:10.5061/dryad.f6t39kj
   file_name: Appendix+S1+-+Lizard+data+version+1.0.csv
   file_extension: .csv
-  manual_download: no
-  sheet: .number
+  manual_download: yes
+  sheet: .na
   long_format: no
-  skip_rows: no
+  skip_rows: .na
   col_separator: ','
   na_value: 'NA'
   taxonomy:
     genus: 'Genus'
-    species: .na
+    species: 'epithet'
     binomial: 'Binomial'
-  comment: 'They provide a metadatfile on the Dryad repo (https://datadryad.org/downloads/file_stream/77990)'
+  comment: 'They provide a metadatafile on the Dryad repo (https://datadryad.org/downloads/file_stream/77990)'
 traits:
 - variable: 'maximum SVL'
   name: 'the maximum known snout-vent length (SVL) of individuals of the species'
