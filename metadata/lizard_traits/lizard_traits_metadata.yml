@@ -1,0 +1,225 @@
+status: complete
+dataset:
+  id: lizard_traits
+  title: Traits of lizards of the world
+  description: Geographical, morphological, ecological, physiological and life history data for the 6657 known species of lizards. Indication whether there are phylogenetic data associated with them, and their threat assessment, if they have one. Main types of variable contained – body size, ecological, thermal biology, geographic, phylogenetic and life history data Spatial location - global Time period – data are for species known from living, or recently extinct species. Most underlying data were collected during the 20th and 21st centuries. Major taxa – Reptilia, Sauria (Squamata, including Amphisbaenia but excluding Serpentes) Level of measurement. 
+  license: CC0 1.0
+  bibtex: ref_lizard.bib
+  doi: 10.1111/geb.12773
+  url: http://doi.org/10.1111/geb.12773
+  taxon: Reptilia
+  taxonomic_level: species
+  type: static
+  file_url: https://datadryad.org/dataset/doi:10.5061/dryad.f6t39kj
+  file_name: Appendix+S1+-+Lizard+data+version+1.0.csv
+  file_extension: .csv
+  manual_download: yes
+  sheet: .na
+  long_format: no
+  skip_rows: .na
+  col_separator: ','
+  na_value: 'NA'
+  taxonomy:
+    genus: 'Genus'
+    species: 'epithet'
+    binomial: 'Binomial'
+  comment: 'They provide a metadatafile on the Dryad repo (https://datadryad.org/downloads/file_stream/77990)'
+traits:
+- variable: 'maximum SVL'
+  name: 'the maximum known snout-vent length (SVL) of individuals of the species'
+  category: .na
+  type: 'quantitative'
+  units: 'mm'
+- variable: 'female SVL'
+  name: 'mean female SVL (midpoints between the minimum and maximum values where means are not reported)'
+  category: .na
+  type: 'quantitative'
+  units: 'mm'
+- variable: 'hatchling/neonate SVL'
+  name: 'midpoint of hatchling or neonate SVL'
+  category: .na
+  type: 'quantitative'
+  units: 'mm'
+- variable: 'Leg development'
+  name: 'whether the species has four functioning legs (“four-legged”), reduced pair or two pairs of legs (“leg reduced”, usually meaning either that the species has fewer than 20 fingers or very short limbs relative to the expectation given its body length), only forelimbs or hind-limbs, or no limbs at all (no missing values).'
+  category: .na
+  type: 'categoric'
+  units: .na
+  levels: 
+  - value: "forelimbs only"            
+    description: "Forelimbs only"
+  - value: "four-legged" 
+    description: "Functioning legs"
+  - value: "hindlimbs only"
+    description: "Hindlimbs only"
+  - value: "leg-reduced"
+    description: "Reduced pair or two pairs of legs"
+  - value: "Limbless"
+    description: "No limb at all (different from missing value)"
+  - value: ""
+    description: "Missing value"
+- variable: 'mass equation (Feldman et al. 2016 unless stated)'
+  name: 'Mass equations – the source for the best equation I have for converting the species (log10) SVL (in mm) into (log 10) mass (in grams; Meiri, 2008, Feldman et al., 2016).'
+  category: .na
+  type: 'categoric'
+  units: .na
+- variable: 'intercept'
+  name: 'the intercept for the mass equation (Feldman et al. 2016 unless stated) (the log mass when SVL is 1mm)'
+  category: .na
+  type: 'quantitative'
+  units: 'log(10)mm to log(10) grams'
+- variable: 'slope'
+  name: 'allometric slope of the mass equation (Feldman et al. 2016 unless stated)'
+  category: .na
+  type: 'quantitative'
+  units: 'log(10)mm to log(10) grams'
+- variable: 'Activity time'
+  name: 'whether a species is diurnal, nocturnal, or cathemera'
+  category: .na
+  type: 'categoric'
+  units: .na
+  levels: 
+  - value: "Cathemeral"            
+    description: "Cathemeral"
+  - value: "Diurnal"            
+    description: "Diurnal"
+  - value: "Nocturnal"            
+    description: "Nocturnal"
+  - value: ""            
+    description: "Missing value"
+- variable: 'substrate'
+  name: 'whether a species is arboreal, fossorial or cryptic (i.e. almost always only found under objects such as rocks or logs, e.g., the skink Chalcides ocellatus) saxicolous, semi-aquatic, terrestrial– or a combination of some of those'
+  category: .na
+  type: 'categoric'
+  units: .na
+  levels: 
+  - value: "Arboreal"            
+    description: "Arboreal"
+  - value: "Arboreal&Saxicolous"            
+    description: "Arboreal & Saxicolous"
+  - value: "Arboreal&Saxicolous&Terrestrials"            
+    description: "Arboreal & Saxicolous & Terrestrial"
+  - value: "Arboreal&Terrestrial"            
+    description: "Arboreal & Terrestrial"
+  - value: "Cryptic"            
+    description: "Cryptic"
+  - value: "Cryptic&Fossorial"            
+    description: "Cryptic & Fossorial"
+  - value: "Cryptic&Terrestrial"            
+    description: "Cryptic & Terrestrial"
+  - value: "Fossorial"            
+    description: "Fossorial"
+  - value: "Fossorial&Saxicolous"            
+    description: "Fossorial & Saxicolous"
+  - value: "Fossorial&Saxicolous&Terrestrial"            
+    description: "Fossorial & Saxicolous & Terrestrial"
+  - value: "Fossorial&Terrestrial"            
+    description: "Fossorial & Terrestrial"
+  - value: "marine"            
+    description: "Marine"
+  - value: "Saxicolous"            
+    description: "Saxicolous"
+  - value: "Saxicolous&Terrestrial"            
+    description: "Saxicolous & Terrestrial"
+  - value: "Semi_Aquatic"            
+    description: "Semi_Aquatic"
+  - value: "Terrestrial"            
+    description: "Terrestrial" 
+  - value: ""            
+    description: "Missing value" 
+- variable: 'diet'
+  name: 'whether a species is herbivorous (consumes mostly plants: >50% if quantitative data are available), carnivorous (eats only, or nearly only, animal matter, >90% if quantitative data are available), or omnivorous (eats mostly animal matter but with considerable percentage of plants: i.e. 10-50% plant matter, if quantitative data exist)'
+  category: .na
+  type: 'categoric'
+  units: .na
+  levels: 
+  - value: "Carnivorous"            
+    description: "Carnivorous" 
+  - value: "Herbivorous"            
+    description: "Herbivorous" 
+  - value: "Omnivorous"            
+    description: "Omnivorous" 
+  - value: ""            
+    description: "Missing value" 
+- variable: 'foraging mode'
+  name: 'whether the species is reported to be an ambush predator (“sit and wait”), an active forager (“Active foraging”) or uses a mixed strategy (“mixed”)'
+  category: .na
+  type: 'categoric'
+  units: .na
+  levels: 
+  - value: "active foraging"            
+    description: "Active forager" 
+  - value: "Sit and Wait"            
+    description: "ambush predator (“sit and wait”)" 
+  - value: "mixed"            
+    description: "uses a mixed strategy"
+  - value: ""            
+    description: "Missing value" 
+- variable: 'reproductive mode'
+  name: 'whether a species is oviparous or viviparous, or whether there are reports on both parity modes (“mixed”). Ovoviviparous species are considered viviparous because the mother carries the young until full term is reached'
+  category: .na
+  type: 'categoric'
+  units: .na
+  levels: 
+  - value: "Oviparous"            
+    description: "Oviparous" 
+  - value: "Viviparous"            
+    description: "Viviparous" 
+  - value: "Mixed"            
+    description: "there are reports on both parity modes (“mixed”)" 
+  - value: "unclear"            
+    description: "unclear (not missing value)" 
+  - value: ""            
+    description: "Missing value" 
+- variable: 'clutch size'
+  name: 'minima, maxima and means (highest and lowest reported means) of clutch or litter sizes'
+  category: .na
+  type: 'quantitative'
+  units: 'eggs/neonates'
+- variable: 'smallest clutch'
+  name: 'smallest reported clutch or litter sizes'
+  category: .na
+  type: 'quantitative'
+  units: 'eggs/neonates'
+- variable: 'largest clutch'
+  name: 'largest reported clutch or litter sizes'
+  category: .na
+  type: 'quantitative'
+  units: 'eggs/neonates'
+- variable: 'smallest mean clutch size'
+  name: 'lowest reported means clutch or litter sizes'
+  category: .na
+  type: 'quantitative'
+  units: 'eggs/neonates'
+- variable: 'largest mean clutch size'
+  name: 'highest reported means clutch or litter sizes'
+  category: .na
+  type: 'quantitative'
+  units: 'eggs/neonates'
+- variable: 'breeding age (months)'
+  name: 'the youngest and oldest reported ages of first breeding (in females if data are given separately for males and females)'
+  category: .na
+  type: 'quantitative'
+  units: 'months'
+- variable: 'youngest age at first breeding (months)'
+  name: 'the youngest reported ages of first breeding (in females if data are given separately for males and females)'
+  category: .na
+  type: 'quantitative'
+  units: 'months'
+- variable: 'oldest age at first breeding (months)'
+  name: 'the oldest reported ages of first breeding (in females if data are given separately for males and females)'
+  category: .na
+  type: 'quantitative'
+  units: 'months'
+- variable: 'minimum mean Tb'
+  name: 'the lowest reported mean body temperatures of active lizards recorded in the field'
+  category: .na
+  type: 'quantitative'
+  units: '°C'
+- variable: 'maximum mean Tb'
+  name: 'the highest reported mean body temperatures of active lizards recorded in the field'
+  category: .na
+  type: 'quantitative'
+  units: '°C'
+
+  
