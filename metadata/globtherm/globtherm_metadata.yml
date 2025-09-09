@@ -13,7 +13,7 @@ dataset:
   file_url: https://datadryad.org/downloads/file_stream/19457
   file_name: GlobalTherm_upload_02_11_17
   file_extension: .csv
-  manual_download: no
+  manual_download: yes
   sheet: .na
   long_format: no
   skip_rows: .na
