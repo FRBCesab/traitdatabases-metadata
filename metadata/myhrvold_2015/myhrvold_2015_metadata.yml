@@ -1,4 +1,4 @@
-status: incomplete
+status: complete
 dataset:
   id: myhrvold_2015
   title: "An amniote life-history database to perform comparative analyses with birds, mammals, and reptiles"
@@ -45,3 +45,128 @@ traits:
   category: .na
   type: quantitative
   units: g
+- variable: maximum_longevity_y
+  name: "Maximum recorded longevity for species"
+  category: .na
+  type: quantitative
+  units: years
+- variable: gestation_d
+  name: "Length of time from conception or fertilization to birth"
+  category: .na
+  type: quantitative
+  units: days
+- variable: weaning_d
+  name: "Age at which the species becomes dependent on food other than its mother's milk"
+  category: .na
+  type: quantitative
+  units: days
+- variable: birth_or_hatching_weight_g
+  name: "Weight at birth or at hatching"
+  category: .na
+  type: quantitative
+  units: g
+- variable: weaning_weight_g
+  name: "Weight at weaning"
+  category: .na
+  type: quantitative
+  units: g
+- variable: egg_mass_g
+  name: "Egg mass"
+  category: .na
+  type: quantitative
+  units: g
+- variable: incubation_d
+  name: "Length of time between egg oviposition and hatching"
+  category: .na
+  type: quantitative
+  units: days
+- variable: fledging_age_d
+  name: "Age of the bird when it is capable of flight"
+  category: .na
+  type: quantitative
+  units: days
+- variable: longevity_y
+  name: "Age at death"
+  category: .na
+  type: quantitative
+  units: years
+- variable: male_maturity_d
+  name: "Age of sexual maturity for males"
+  category: .na
+  type: quantitative
+  units: days
+- variable: inter_litter_or_interbirth_interval_y
+  name: "Interval between successive births or ovipositions.  This can differ from litter/clutch frequency due to seasonality"
+  category: .na
+  type: quantitative
+  units: years
+- variable: female_body_mass_g
+  name: "Body mass of female adults"
+  category: .na
+  type: quantitative
+  units: g
+- variable: male_body_mass_g
+  name: "Body mass of male adults"
+  category: .na
+  type: quantitative
+  units: g
+- variable: no_sex_body_mass_g
+  name: "Body mass of unspecified adults"
+  category: .na
+  type: quantitative
+  units: g
+- variable: egg_width_mm
+  name: "Egg width"
+  category: .na
+  type: quantitative
+  units: mm
+- variable: egg_length_mm
+  name: "Egg length"
+  category: .na
+  type: quantitative
+  units: mm
+- variable: fledging_mass_g
+  name: "Mass of the bird at the time it has developed the feathers necessary for flight"
+  category: .na
+  type: quantitative
+  units: g
+- variable: adult_svl_cm
+  name: "Measure from tip of the snout to either the opening of the cloaca (Birds & Reptiles) or tail base (mammals) for male, female, and/or unspecified adults"
+  category: .na
+  type: quantitative
+  units: cm
+- variable: male_svl_cm
+  name: "Measure from tip of the snout to the opening of the cloaca or tail base for male adults"
+  category: .na
+  type: quantitative
+  units: cm
+- variable: female_svl_cm
+  name: "Measure from tip of the snout to the opening of the cloaca or tail base for female adults"
+  category: .na
+  type: quantitative
+  units: cm
+- variable: birth_or_hatching_svl_cm
+  name: "Measure from tip of the snout to the opening of the cloaca or tail base at the time of hatching for male, female, and/or unspecified newborn animals"
+  category: .na
+  type: quantitative
+  units: cm
+- variable: female_svl_at_maturity_cm
+  name: "Measure from tip of the snout to the opening of the cloaca or tail base at the time of maturity for females"
+  category: .na
+  type: quantitative
+  units: cm
+- variable: female_body_mass_at_maturity_g
+  name: "Body mass at the time of maturity for females"
+  category: .na
+  type: quantitative
+  units: g
+- variable: no_sex_svl_cm
+  name: "Measure from tip of the snout to the opening of the cloaca or tail base for unspecified adults"
+  category: .na
+  type: quantitative
+  units: cm
+- variable: no_sex_maturity_d
+  name: "Age at sexual maturity for unspecified adults"
+  category: .na
+  type: quantitative
+  units: days
